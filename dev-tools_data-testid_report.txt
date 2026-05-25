@@ -1,0 +1,32 @@
+{
+    "title": "Recording 20.5.2026 at 22:47:36",
+    "selectorAttribute": "data-testid",
+    "steps": [
+        {
+            "type": "emulateNetworkConditions",
+            "download": -1,
+            "upload": -1,
+            "latency": 0
+        },
+        {
+            "type": "setViewport",
+            "width": 1633,
+            "height": 1400,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "chrome://terms/",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "chrome://terms/",
+                    "title": ""
+                }
+            ]
+        }
+    ]
+}
