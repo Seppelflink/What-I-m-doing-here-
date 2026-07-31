@@ -16,3 +16,14 @@ Structure
 - assets/ — optional sample code, API snippets, or starter templates
 
 Estimated duration: 60–90 minutes (hands-on)
+
+Starter app
+- A minimal starter is included at assets/starter/ (index.html, server.js, .env.example).
+- Quick run:
+  1. cd assets/starter
+  2. npm init -y && npm install express node-fetch@2
+  3. (optional) set MODEL_API_URL=... & set MODEL_API_KEY=...
+  4. node server.js
+  5. Open http://localhost:3000
+
+Note: Instructor-only solutions live under assets/solutions/ and are intentionally untracked.
