@@ -32,3 +32,6 @@ google-services.json
 
 # Android Profiling
 *.hprof
+# Instructor solutions - keep out of learners' default view
+# Place instructor assets under training/module-XX/assets/solutions/
+training/**/assets/solutions/**
