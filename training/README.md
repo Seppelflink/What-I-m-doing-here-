@@ -8,6 +8,7 @@ Structure
 - module-02-prompt-engineering/: Prompt engineering examples and exercises
 - module-03-apis-and-tools/: How to call models via APIs and tooling
 - module-04-responsible-ai/: Responsible AI & safety (new)
+- module-05-demo-app/: Build and deploy a small demo app (new)
 
 Goals
 - Provide lightweight, markdown-based modules (slides + exercises)
