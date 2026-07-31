@@ -1,0 +1,9 @@
+Prompt examples — Module 02
+
+1) Original: "Summarize this article."  
+   Improved: "Summarize this article in 5 bullet points, focusing on outcomes and recommended actions."
+
+2) Original: "Write a product description."  
+   Improved: "Write a 2-sentence product description emphasizing benefits for remote teams; include one headline and one CTA."
+
+3) Few-shot example snippet: provide 2 short examples showing input → desired output format.

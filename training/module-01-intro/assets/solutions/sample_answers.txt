@@ -1,0 +1,8 @@
+Sample answers — Module 01 exercises
+
+Prompt: "Write a concise summary of the following paragraph: <sample text>"
+Sample response: "This paragraph explains X, Y, and Z. The main point is ..."
+
+Hallucination check: verify any factual claims against a reliable source and mark as 'needs citation' if unsure.
+
+Rubric: 0=missing, 1=partial, 2=correct & concise
