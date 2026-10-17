@@ -1,182 +1,161 @@
-# Arbeitsschritte zur Erstellung einer selbständigen Software-Anwendung
+# Interview: Von der Idee zum Projektplan (`plan.md`)
 
-> **Hinweis:** Die Schritte stehen in einer sinnvollen Grundreihenfolge. In echten Projekten werden einzelne Schritte häufig wiederholt, wenn Tests oder Rückmeldungen Verbesserungen erforderlich machen.
+Dieses Dokument ist eine Interview-Anleitung. Ein KI-Assistent führt damit ein Gespräch mit dem Benutzer und schreibt die Antworten am Ende in die Datei `plan.md`.
 
-## 1. Idee und Problem festlegen
+> **Hinweis:** Die Schritte folgen dem üblichen Software Development Life Cycle. In echten Projekten werden einzelne Schritte wiederholt, wenn Tests oder Rückmeldungen Verbesserungen erforderlich machen.
 
-- Beschreibe in ein bis zwei Sätzen, welches Problem die Anwendung lösen soll.
-- Lege fest, welchen konkreten Nutzen sie bietet.
-- Prüfe, ob bereits ähnliche Programme existieren und was deine Anwendung anders oder einfacher machen soll.
+## Regeln für den Assistenten
 
-**Ergebnis:** Eine kurze und verständliche Projektidee.
+1. Stelle **eine Frage nach der anderen** (bei Rückfragen im Chat mit dem Werkzeug `ask_user`) und warte auf die Antwort.
+2. Gib, wenn möglich, Antwortvorschläge zur Auswahl vor. Markiere die empfohlene Option mit „(Empfohlen)“. Der Benutzer kann immer frei antworten.
+3. Frage nach, wenn eine Antwort zu vage ist. Triff keine stillen Annahmen.
+4. Antwortet der Benutzer „weiß ich nicht“, schlage eine einfache Standardlösung vor und notiere sie als **Annahme** in `plan.md`.
+5. Gib nach jedem Abschnitt in einem Satz wieder, was du verstanden hast.
+6. Schreibe Geheimnisse (Passwörter, Schlüssel) niemals in `plan.md`.
+7. Schreibe `plan.md` erst nach dem letzten Abschnitt. Zeige sie dem Benutzer und frage, ob etwas fehlt oder geändert werden soll.
 
-## 2. Zielgruppe bestimmen
+## Fragen
 
-- Lege fest, wer die Anwendung benutzen soll.
-- Notiere Vorkenntnisse, Bedürfnisse und typische Aufgaben dieser Personen.
-- Entscheide, ob das Programm nur für dich, für eine kleine Gruppe oder öffentlich gedacht ist.
+### 1. Idee und Problem
 
-**Ergebnis:** Eine Beschreibung der zukünftigen Benutzer.
+- Welches Problem soll die Anwendung lösen? (ein bis zwei Sätze)
+- Welchen konkreten Nutzen bietet sie?
+- Gibt es ähnliche Programme? Was soll deine Anwendung anders oder einfacher machen?
 
-## 3. Anforderungen sammeln
+### 2. Zielgruppe
 
-- Schreibe alle gewünschten Funktionen zunächst ungeordnet auf.
-- Trenne zwischen **Muss-Funktionen** und **Kann-Funktionen**.
-- Notiere auch nichtfunktionale Anforderungen, zum Beispiel Sicherheit, Geschwindigkeit, Barrierefreiheit und unterstützte Betriebssysteme.
+- Wer soll die Anwendung benutzen?
+- Welche Vorkenntnisse haben diese Personen, und welche typischen Aufgaben erledigen sie?
+- Ist das Programm nur für dich, für eine kleine Gruppe oder öffentlich gedacht?
 
-**Ergebnis:** Eine übersichtliche Anforderungsliste.
+### 3. Anforderungen
 
-## 4. Eine erste Version begrenzen
+- Welche Funktionen wünschst du dir? (zunächst ungeordnet)
+- Welche davon sind **Muss-Funktionen**, welche **Kann-Funktionen**?
+- Welche Anforderungen gibt es an Sicherheit, Geschwindigkeit, Barrierefreiheit und unterstützte Betriebssysteme?
 
-- Wähle nur die Funktionen aus, die für eine nutzbare erste Version unbedingt nötig sind.
-- Verschiebe zusätzliche Wünsche in eine Liste für spätere Versionen.
-- Formuliere ein klares Ziel, an dem du erkennst, wann die erste Version fertig ist.
+### 4. Erste Version (MVP)
 
-**Ergebnis:** Der Umfang des MVP, also des kleinsten sinnvoll nutzbaren Produkts.
+- Welche Funktionen braucht die erste nutzbare Version unbedingt?
+- Welche Wünsche verschieben wir auf spätere Versionen?
+- Woran erkennst du, dass die erste Version fertig ist?
 
-## 5. Machbarkeit und Risiken prüfen
+### 5. Machbarkeit und Risiken
 
-- Prüfe, ob du das Projekt mit deinen Kenntnissen, deiner Zeit und deinem Budget umsetzen kannst.
-- Untersuche schwierige Punkte frühzeitig mit kleinen Testprogrammen oder Prototypen.
-- Notiere Risiken wie unbekannte Technik, kostenpflichtige Dienste, Datenschutz oder fehlende Schnittstellen.
+- Wie viel Zeit und Budget stehen zur Verfügung, und welche Kenntnisse bringst du mit?
+- Welche Punkte sind unbekannt oder schwierig (neue Technik, kostenpflichtige Dienste, Datenschutz, fehlende Schnittstellen)?
+- Was könnte man früh mit einem kleinen Test ausprobieren?
 
-**Ergebnis:** Eine realistische Einschätzung mit möglichen Gegenmaßnahmen.
+### 6. Anwendungsart und Zielplattform
 
-## 6. Anwendungsart und Zielplattform wählen
+- Soll es eine Desktop-, Web-, Mobil- oder Kommandozeilen-Anwendung werden?
+- Welche Systeme und Versionen sollen unterstützt werden?
+- Soll alles lokal laufen oder teilweise über einen Server?
 
-- Entscheide dich beispielsweise für Desktop-, Web-, Mobil- oder Kommandozeilen-Anwendung.
-- Lege unterstützte Systeme und Versionen fest, zum Beispiel Windows 11 oder aktuelle Linux-Distributionen.
-- Überlege, ob die Anwendung vollständig lokal oder teilweise über einen Server arbeiten soll.
+### 7. Technik
 
-**Ergebnis:** Eine klare technische Zielumgebung.
+- Gibt es eine bevorzugte Programmiersprache oder ein Framework? Sonst schlage eine einfache, gut dokumentierte, kostenlose Lösung vor.
+- Wie sollen Daten gespeichert werden (Dateien, SQLite, Server-Datenbank)?
+- Gibt es Vorgaben zu Lizenzen von Bibliotheken?
 
-## 7. Technik auswählen
+### 8. Bedienung und Aufbau
 
-- Wähle eine geeignete Programmiersprache und ein passendes Framework.
-- Lege fest, wie Daten gespeichert werden, etwa in Dateien, SQLite oder einer Server-Datenbank.
-- Bevorzuge als Anfänger eine einfache, gut dokumentierte und möglichst kostenlose Werkzeugkette.
-- Prüfe vorab die Lizenzen aller Bibliotheken und Komponenten.
+- Welche Fenster, Seiten oder Eingabemasken braucht die Anwendung?
+- Wie erledigt ein Benutzer seine wichtigste Aufgabe Schritt für Schritt?
+- Welche Hauptbestandteile hat die Anwendung, und welche Daten tauschen sie aus?
 
-**Ergebnis:** Ein begründeter Technikplan.
+### 9. Projektplanung
 
-## 8. Bedienung und Aufbau entwerfen
+- In welche kleinen, überprüfbaren Aufgaben lassen sich die Funktionen zerlegen?
+- Welche Aufgaben hängen voneinander ab, und was hat Priorität?
+- Welche Zwischenziele (Meilensteine) sind sinnvoll, und woran erkennt man jeweils die Fertigstellung?
 
-- Zeichne die wichtigsten Fenster, Seiten oder Eingabemasken zunächst auf Papier oder als Wireframe.
-- Beschreibe, wie ein Benutzer seine wichtigsten Aufgaben Schritt für Schritt erledigt.
-- Plane die Hauptbestandteile der Anwendung und ihren Datenaustausch.
-- Halte das Design zunächst einfach und einheitlich.
+### 10. Entwicklungsumgebung
 
-**Ergebnis:** Oberflächenentwürfe und ein grober Architekturplan.
+- Welche Werkzeuge (Editor, Laufzeit, Compiler) sind schon installiert, welche fehlen?
+- Soll das Projekt mit Git versioniert werden, und wo liegt das Repository?
+- Wie werden geheime Zugangsdaten vom Quellcode getrennt?
 
-## 9. Projekt planen
+### 11. Prototyp
 
-- Zerlege die Funktionen in kleine, überprüfbare Aufgaben.
-- Ordne die Aufgaben nach Abhängigkeiten und Priorität.
-- Lege erreichbare Zwischenziele fest und plane Zeitreserven ein.
-- Definiere für jede Aufgabe, woran ihre Fertigstellung erkennbar ist.
+- Welcher Arbeitsablauf soll im Prototyp als Erstes funktionieren?
+- Welche Beispieldaten oder vorläufigen Oberflächen dürfen verwendet werden?
+- Was soll der Prototyp beweisen?
 
-**Ergebnis:** Eine Aufgabenliste mit Meilensteinen.
+### 12. Schrittweise Entwicklung
 
-## 10. Entwicklungsumgebung einrichten
+- Wie sollen Code, Dateinamen und Ordner benannt und strukturiert werden?
+- Wie sollen Eingabefehler und unerwartete Situationen behandelt werden?
+- Wie oft soll committet werden, und wie wird die Aufgabenliste aktuell gehalten?
 
-- Installiere Editor oder Entwicklungsumgebung, Laufzeit, Compiler und benötigte Werkzeuge.
-- Erstelle ein neues Projekt mit verständlicher Ordnerstruktur.
-- Richte eine Versionsverwaltung mit Git ein und speichere regelmäßig kleine, nachvollziehbare Änderungen.
-- Trenne geheime Zugangsdaten vom Quellcode und sichere das Repository.
+### 13. Tests
 
-**Ergebnis:** Eine funktionsfähige und abgesicherte Arbeitsumgebung.
+- Was soll automatisch getestet werden?
+- Welche Fehl-, Leer- und Extremeingaben sollen geprüft werden?
+- Wer probiert die Anwendung aus, und auf welchem sauberen Testsystem werden Installation und Deinstallation getestet?
 
-## 11. Kleinen Prototyp erstellen
+### 14. Sicherheit und Datenschutz
 
-- Implementiere zuerst den wichtigsten Arbeitsablauf mit möglichst wenig Zusatzfunktionen.
-- Verwende vorläufige Oberflächen oder Beispieldaten, wenn das Zeit spart.
-- Prüfe früh, ob die gewählte Technik grundsätzlich funktioniert.
-- Verwirf oder ändere ungeeignete Ansätze, bevor viel weiterer Code entsteht.
+- Welche Daten werden verarbeitet, warum, und wie können sie gelöscht werden?
+- Welche Rechte (Dateien, Netzwerk, Benutzer) braucht die Anwendung höchstens?
+- Gibt es rechtliche Anforderungen für den konkreten Einsatzfall?
 
-**Ergebnis:** Ein einfacher, noch nicht veröffentlichungsreifer Funktionsnachweis.
+### 15. Dokumentation
 
-## 12. Anwendung schrittweise entwickeln
+- Welche Anleitungen brauchen Benutzer (Installation, Start, Beispiele, Fehlerlösungen)?
+- Welche Hinweise brauchen Entwickler (Aufbau, Abhängigkeiten, Build, Tests)?
+- Welche Lizenz, Versionsnummer und welches Änderungsprotokoll sollen verwendet werden?
 
-- Setze jeweils nur eine kleine Funktion um.
-- Prüfe sie sofort und speichere anschließend einen verständlich benannten Git-Commit.
-- Halte Code, Dateinamen und Ordnerstruktur einheitlich und verständlich.
-- Behandle Eingabefehler und unerwartete Situationen kontrolliert.
-- Aktualisiere die Aufgabenliste und technische Dokumentation während der Entwicklung.
+### 16. Veröffentlichung vorbereiten
 
-**Ergebnis:** Eine zunehmend vollständige und nachvollziehbare Anwendung.
+- Welches Paketformat soll es sein (Installer, portable Version, Container)?
+- Wie wird das Paket vor der Verteilung getestet und auf Manipulation geprüft?
+- Wie sieht der Rückweg zur vorherigen stabilen Version aus?
 
-## 13. Tests durchführen
+### 17. Bereitstellung
 
-- Teste einzelne Funktionen automatisch, soweit dies sinnvoll möglich ist.
-- Teste das Zusammenspiel der Programmteile und den vollständigen Hauptablauf.
-- Prüfe falsche, leere, sehr große und ungewöhnliche Eingaben.
-- Teste Installation, Start, Aktualisierung und Deinstallation auf einem sauberen Testsystem.
-- Lass möglichst andere Personen die Anwendung ausprobieren und protokolliere gefundene Fehler.
+- Über welchen vertrauenswürdigen Kanal soll veröffentlicht werden?
+- Sollen zuerst wenige Testbenutzer die Anwendung bekommen?
+- Wie können Benutzer Kontakt aufnehmen, und wo gibt es Prüfsumme und Dokumentation?
 
-**Ergebnis:** Eine Fehlerliste, Testergebnisse und eine stabilere Anwendung.
+### 18. Betrieb und Wartung
 
-## 14. Sicherheit und Datenschutz prüfen
+- Wo werden Fehlermeldungen und Rückmeldungen gesammelt?
+- Wie werden Sicherheitsprobleme und Abhängigkeits-Updates priorisiert?
+- Wie werden Daten gesichert, und wie wird die Wiederherstellung getestet?
 
-- Speichere Passwörter, Schlüssel und persönliche Daten nicht ungeschützt.
-- Validiere alle Eingaben und beschränke Datei-, Netzwerk- und Benutzerrechte auf das notwendige Minimum.
-- Aktualisiere unsichere oder veraltete Abhängigkeiten.
-- Dokumentiere, welche Daten verarbeitet werden, warum sie benötigt werden und wie sie gelöscht werden können.
-- Prüfe vor einer Veröffentlichung die rechtlichen Anforderungen für deinen konkreten Einsatzfall.
+## Ergebnis: `plan.md`
 
-**Ergebnis:** Dokumentierte Schutzmaßnahmen und behobene Sicherheitsprobleme.
+Lege `plan.md` im Projektordner an. Verwende pro Abschnitt eine Überschrift mit der Nummer und dem Namen oben, darunter die Antworten des Benutzers in kurzen Stichpunkten. Ergänze am Anfang:
 
-## 15. Dokumentation und Hilfe erstellen
+- **Zusammenfassung** in zwei bis drei Sätzen.
+- **Annahmen**: alles, was der Assistent vorgeschlagen hat, weil der Benutzer es nicht wusste.
+- **Offene Fragen**: alles, was noch geklärt werden muss.
 
-- Schreibe eine kurze Installations- und Startanleitung.
-- Erkläre die wichtigsten Funktionen anhand einfacher Beispiele.
-- Dokumentiere Voraussetzungen, bekannte Einschränkungen und typische Fehlerlösungen.
-- Ergänze für Entwickler Hinweise zu Projektaufbau, Abhängigkeiten, Build und Tests.
-- Füge Lizenz, Versionsnummer und Änderungsprotokoll hinzu.
+Füge am Ende eine **Aufgabenliste** mit den Meilensteinen aus Abschnitt 9 als Checkboxen hinzu.
 
-**Ergebnis:** Eine Benutzer- und Entwicklerdokumentation.
-
-## 16. Veröffentlichung vorbereiten
-
-- Erzeuge ein passendes Installationspaket oder eine portable Version.
-- Verwende eine eindeutige Versionsnummer und erstelle Versionshinweise.
-- Teste genau das Paket, das später verteilt wird.
-- Prüfe Dateien möglichst automatisiert auf Schadsoftware und Manipulationen.
-- Sichere die vorherige stabile Version und bereite einen Rückweg bei Problemen vor.
-
-**Ergebnis:** Ein geprüftes Veröffentlichungspaket.
-
-## 17. Anwendung bereitstellen
-
-- Veröffentliche die Anwendung über einen geeigneten, vertrauenswürdigen Kanal.
-- Stelle Download, Dokumentation, Prüfsumme und Kontaktmöglichkeit gemeinsam bereit.
-- Beginne bei Bedarf mit wenigen Testbenutzern, bevor alle Benutzer die neue Version erhalten.
-- Beobachte die ersten Installationen besonders aufmerksam.
-
-**Ergebnis:** Eine installierbare und erreichbare erste Version.
-
-## 18. Betrieb und Wartung organisieren
-
-- Sammle Fehlermeldungen und Rückmeldungen an einer zentralen Stelle.
-- Priorisiere Sicherheitsprobleme und schwere Fehler vor neuen Funktionen.
-- Aktualisiere Abhängigkeiten, Dokumentation und Tests regelmäßig.
-- Sichere wichtige Daten und teste die Wiederherstellung.
-- Plane neue Versionen wieder ab Schritt 3, statt Änderungen ungeordnet einzubauen.
-
-**Ergebnis:** Eine dauerhaft gepflegte und verbesserbare Anwendung.
-
-## Einfache Abschluss-Checkliste
+## Abschluss-Checkliste
 
 - [ ] Problem, Zielgruppe und Nutzen sind klar beschrieben.
 - [ ] Die Muss-Funktionen der ersten Version sind festgelegt.
 - [ ] Plattform, Technik und Datenspeicherung sind entschieden.
 - [ ] Aufgaben, Risiken und Meilensteine sind dokumentiert.
-- [ ] Git und eine sichere Entwicklungsumgebung sind eingerichtet.
-- [ ] Der wichtigste Benutzerablauf funktioniert vollständig.
-- [ ] Fehlerfälle, Installation und unterstützte Systeme wurden getestet.
-- [ ] Sicherheit, Datenschutz und Lizenzen wurden geprüft.
-- [ ] Benutzerhilfe und technische Dokumentation sind vorhanden.
-- [ ] Das endgültige Veröffentlichungspaket wurde separat getestet.
-- [ ] Fehlerannahme, Updates, Datensicherung und Wartung sind organisiert.
+- [ ] Git und eine sichere Entwicklungsumgebung sind geplant.
+- [ ] Der wichtigste Benutzerablauf ist beschrieben.
+- [ ] Tests, Installation und unterstützte Systeme sind geplant.
+- [ ] Sicherheit, Datenschutz und Lizenzen sind geklärt.
+- [ ] Benutzerhilfe und technische Dokumentation sind geplant.
+- [ ] Veröffentlichung und Wartung sind organisiert.
+- [ ] Der Benutzer hat `plan.md` gelesen und freigegeben.
+
+## Ideen für weitere Trainingsmodule
+
+Die Abschnitte eignen sich als Vorlage für neue Module im Ordner `training/`:
+
+- **Modul „Projektplanung mit KI“**: Ein Projekt mit diesem Interview planen (Abschnitte 1–9).
+- **Modul „Sicher entwickeln“**: Abschnitte 10 und 14 mit Geheimnissen, Abhängigkeiten und Datenschutz vertiefen.
+- **Modul „Testen und Veröffentlichen“**: Abschnitte 13, 16 und 17 mit automatischen Tests und Release-Paketen üben.
+- **Modul „Betrieb und Wartung“**: Abschnitt 18 mit Fehlererfassung, Updates und Datensicherung behandeln.
 
 ## Quellenbasis
 
