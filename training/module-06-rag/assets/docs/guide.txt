@@ -1,0 +1,3 @@
+Acme Widget Pro guide. The Widget Pro has a battery life of twelve hours on a single charge. Charging from empty to full takes about two hours using the included USB-C cable.
+
+To reset the Widget Pro, hold the power button for ten seconds until the light blinks blue. Resetting removes all paired devices but keeps firmware updates.
