@@ -1,0 +1,28 @@
+name: Markdown checks
+
+on:
+  push:
+    paths:
+      - '**/*.md'
+  pull_request:
+    paths:
+      - '**/*.md'
+
+jobs:
+  lint-and-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Super-Linter (markdown)
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_MARKDOWN: true
+          FILTER_REGEX_EXCLUDE: '(.github/|node_modules/)'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check links with lychee
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --timeout 10 --exclude '^file:'

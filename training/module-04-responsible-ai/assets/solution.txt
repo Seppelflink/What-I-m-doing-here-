@@ -1,0 +1,11 @@
+Sample solution hints
+
+- Example filter (regex pseudo-code):
+  if (output.matches(/\b(violent|hate|slur)\b/i)) {
+    flagForReview(output)
+  }
+
+- Example mitigation: change prompt to add a safety instruction:
+  "System: refuse to produce hateful or violent content. Answer politely and safely."
+
+- Keep instructor solutions out of learners' default view; use assets/solutions/ or a hidden folder for full references.
