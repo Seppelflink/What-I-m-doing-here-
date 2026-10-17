@@ -23,6 +23,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check links with lychee
-        uses: lycheeverse/lychee-action@v1
+        uses: lycheeverse/lychee-action@v2
         with:
-          args: --timeout 10 --exclude '^file:'
+          args: --timeout 10 --exclude '^file:' '**/*.md'
+          fail: false
