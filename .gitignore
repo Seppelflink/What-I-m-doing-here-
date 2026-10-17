@@ -30,6 +30,9 @@ render.experimental.xml
 # Google Services (e.g. APIs or Firebase)
 google-services.json
 
+# Local secrets
+.env
+
 # Android Profiling
 *.hprof
 # Instructor solutions - keep out of learners' default view
