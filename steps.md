@@ -11,7 +11,7 @@ Dieses Dokument ist eine Interview-Anleitung. Ein KI-Assistent führt damit ein 
 3. Frage nach, wenn eine Antwort zu vage ist. Triff keine stillen Annahmen.
 4. Antwortet der Benutzer „weiß ich nicht“, schlage eine einfache Standardlösung vor und notiere sie als **Annahme** in `plan.md`.
 5. Gib nach jedem Abschnitt in einem Satz wieder, was du verstanden hast.
-6. Schreibe Geheimnisse (Passwörter, Schlüssel) niemals in `plan.md`.
+6. Schreibe Geheimnisse (Passwörter, Schlüssel) niemals in `plan.md` und niemals in `.gitignore`. Notiere nur die **Namen** der Variablen, zum Beispiel `OLLAMA_API_KEY`, nie die Werte.
 7. Schreibe `plan.md` erst nach dem letzten Abschnitt. Zeige sie dem Benutzer und frage, ob etwas fehlt oder geändert werden soll.
 
 ## Fragen
@@ -75,6 +75,8 @@ Dieses Dokument ist eine Interview-Anleitung. Ein KI-Assistent führt damit ein 
 - Welche Werkzeuge (Editor, Laufzeit, Compiler) sind schon installiert, welche fehlen?
 - Soll das Projekt mit Git versioniert werden, und wo liegt das Repository?
 - Wie werden geheime Zugangsdaten vom Quellcode getrennt?
+  - Empfohlenes Vorgehen: Die Werte stehen nur in einer lokalen `.env`-Datei. Diese Datei steht in `.gitignore`, damit Git sie nicht erfasst. Im Repository liegt eine `.env.example` mit leeren Platzhaltern.
+  - Wichtig: `.gitignore` ist selbst öffentlich und versteckt **keine** Werte. Sie schützt nur Dateien, die noch nicht von Git erfasst wurden. Wurde ein Geheimnis bereits committet, bleibt es im Verlauf. Dann muss der Schlüssel sofort erneuert werden.
 
 ### 11. Prototyp
 
