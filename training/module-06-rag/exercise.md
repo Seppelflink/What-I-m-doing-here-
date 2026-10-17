@@ -23,6 +23,7 @@ Description
   - Ask a question that is not covered by your documents. Does the pipeline say "I don't know"?
   - Change the chunk size (50 vs 300 words). How does retrieval quality change?
   - Edit a document to make it outdated or contradictory and observe the effect on answers.
+  - Try a synonym question such as "How long is the warranty?" when the document says "one year". Keyword matching finds the right chunk, but the answer may be only the title sentence because "long" never matches "year". This is a limit of keyword retrieval; embeddings handle synonyms better (see Stretch goals).
 
 Success criteria
 - Questions covered by the documents return an answer that cites the correct chunk ID.
