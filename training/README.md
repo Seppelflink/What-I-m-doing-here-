@@ -9,6 +9,7 @@ Structure
 - module-03-apis-and-tools/: How to call models via APIs and tooling
 - module-04-responsible-ai/: Responsible AI & safety (new)
 - module-05-demo-app/: Build and deploy a small demo app (new)
+- module-06-rag/: Retrieval-augmented generation: grounding answers in trusted documents (new)
 
 Goals
 - Provide lightweight, markdown-based modules (slides + exercises)
