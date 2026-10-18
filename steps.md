@@ -1,164 +1,166 @@
-# Interview: Von der Idee zum Projektplan (`plan.md`)
+# Interview: From Idea to Project Plan (`plan.md`)
 
-Dieses Dokument ist eine Interview-Anleitung. Ein KI-Assistent führt damit ein Gespräch mit dem Benutzer und schreibt die Antworten am Ende in die Datei `plan.md`.
+This document is an interview script. An AI assistant uses it to talk with the user and, at the end, writes the answers to a file called `plan.md`.
 
-> **Hinweis:** Die Schritte folgen dem üblichen Software Development Life Cycle. In echten Projekten werden einzelne Schritte wiederholt, wenn Tests oder Rückmeldungen Verbesserungen erforderlich machen.
+German version (backup): [steps.de.md](steps.de.md)
 
-## Regeln für den Assistenten
+> **Note:** The steps follow the usual software development life cycle. In real projects, individual steps are repeated when tests or feedback call for improvements.
 
-1. Stelle **eine Frage nach der anderen** (bei Rückfragen im Chat mit dem Werkzeug `ask_user`) und warte auf die Antwort.
-2. Gib, wenn möglich, Antwortvorschläge zur Auswahl vor. Markiere die empfohlene Option mit „(Empfohlen)“. Der Benutzer kann immer frei antworten.
-3. Frage nach, wenn eine Antwort zu vage ist. Triff keine stillen Annahmen.
-4. Antwortet der Benutzer „weiß ich nicht“, schlage eine einfache Standardlösung vor und notiere sie als **Annahme** in `plan.md`.
-5. Gib nach jedem Abschnitt in einem Satz wieder, was du verstanden hast.
-6. Schreibe Geheimnisse (Passwörter, Schlüssel) niemals in `plan.md` und niemals in `.gitignore`. Notiere nur die **Namen** der Variablen, zum Beispiel `OLLAMA_API_KEY`, nie die Werte.
-7. Schreibe `plan.md` erst nach dem letzten Abschnitt. Zeige sie dem Benutzer und frage, ob etwas fehlt oder geändert werden soll.
+## Rules for the assistant
 
-## Fragen
+1. Ask **one question at a time** (use the `ask_user` tool when asking in chat) and wait for the answer.
+2. Offer suggested answers to choose from where possible. Mark the recommended option with "(Recommended)". The user can always answer freely.
+3. Ask a follow-up if an answer is too vague. Do not make silent assumptions.
+4. If the user answers "I don't know", suggest a simple default and record it as an **assumption** in `plan.md`.
+5. After each section, restate in one sentence what you understood.
+6. Never write secrets (passwords, keys) into `plan.md` or into `.gitignore`. Record only the **names** of variables, for example `OLLAMA_API_KEY`, never the values.
+7. Write `plan.md` only after the last section. Show it to the user and ask whether anything is missing or should change.
 
-### 1. Idee und Problem
+## Questions
 
-- Welches Problem soll die Anwendung lösen? (ein bis zwei Sätze)
-- Welchen konkreten Nutzen bietet sie?
-- Gibt es ähnliche Programme? Was soll deine Anwendung anders oder einfacher machen?
+### 1. Idea and problem
 
-### 2. Zielgruppe
+- What problem should the application solve? (one or two sentences)
+- What concrete benefit does it offer?
+- Are there similar programs? What should your application do differently or more simply?
 
-- Wer soll die Anwendung benutzen?
-- Welche Vorkenntnisse haben diese Personen, und welche typischen Aufgaben erledigen sie?
-- Ist das Programm nur für dich, für eine kleine Gruppe oder öffentlich gedacht?
+### 2. Target audience
 
-### 3. Anforderungen
+- Who should use the application?
+- What prior knowledge do these people have, and what typical tasks do they perform?
+- Is the program meant only for you, for a small group, or for the public?
 
-- Welche Funktionen wünschst du dir? (zunächst ungeordnet)
-- Welche davon sind **Muss-Funktionen**, welche **Kann-Funktionen**?
-- Welche Anforderungen gibt es an Sicherheit, Geschwindigkeit, Barrierefreiheit und unterstützte Betriebssysteme?
+### 3. Requirements
 
-### 4. Erste Version (MVP)
+- Which features do you want? (unsorted at first)
+- Which of them are **must-have** features, and which are **nice-to-have**?
+- What are the requirements for security, speed, accessibility, and supported operating systems?
 
-- Welche Funktionen braucht die erste nutzbare Version unbedingt?
-- Welche Wünsche verschieben wir auf spätere Versionen?
-- Woran erkennst du, dass die erste Version fertig ist?
+### 4. First version (MVP)
 
-### 5. Machbarkeit und Risiken
+- Which features does the first usable version absolutely need?
+- Which wishes do we postpone to later versions?
+- How will you know the first version is done?
 
-- Wie viel Zeit und Budget stehen zur Verfügung, und welche Kenntnisse bringst du mit?
-- Welche Punkte sind unbekannt oder schwierig (neue Technik, kostenpflichtige Dienste, Datenschutz, fehlende Schnittstellen)?
-- Was könnte man früh mit einem kleinen Test ausprobieren?
+### 5. Feasibility and risks
 
-### 6. Anwendungsart und Zielplattform
+- How much time and budget are available, and what skills do you bring?
+- Which points are unknown or difficult (new technology, paid services, privacy, missing interfaces)?
+- What could be tried early with a small test?
 
-- Soll es eine Desktop-, Web-, Mobil- oder Kommandozeilen-Anwendung werden?
-- Welche Systeme und Versionen sollen unterstützt werden?
-- Soll alles lokal laufen oder teilweise über einen Server?
+### 6. Application type and target platform
 
-### 7. Technik
+- Should it be a desktop, web, mobile, or command-line application?
+- Which systems and versions should be supported?
+- Should everything run locally, or partly through a server?
 
-- Gibt es eine bevorzugte Programmiersprache oder ein Framework? Sonst schlage eine einfache, gut dokumentierte, kostenlose Lösung vor.
-- Wie sollen Daten gespeichert werden (Dateien, SQLite, Server-Datenbank)?
-- Gibt es Vorgaben zu Lizenzen von Bibliotheken?
+### 7. Technology
 
-### 8. Bedienung und Aufbau
+- Is there a preferred programming language or framework? Otherwise suggest a simple, well-documented, free option.
+- How should data be stored (files, SQLite, server database)?
+- Are there requirements regarding library licenses?
 
-- Welche Fenster, Seiten oder Eingabemasken braucht die Anwendung?
-- Wie erledigt ein Benutzer seine wichtigste Aufgabe Schritt für Schritt?
-- Welche Hauptbestandteile hat die Anwendung, und welche Daten tauschen sie aus?
+### 8. Usage and structure
 
-### 9. Projektplanung
+- Which windows, pages, or input forms does the application need?
+- How does a user complete the most important task, step by step?
+- What are the main components of the application, and what data do they exchange?
 
-- In welche kleinen, überprüfbaren Aufgaben lassen sich die Funktionen zerlegen?
-- Welche Aufgaben hängen voneinander ab, und was hat Priorität?
-- Welche Zwischenziele (Meilensteine) sind sinnvoll, und woran erkennt man jeweils die Fertigstellung?
+### 9. Project planning
 
-### 10. Entwicklungsumgebung
+- Into which small, verifiable tasks can the features be broken down?
+- Which tasks depend on each other, and what has priority?
+- Which intermediate goals (milestones) make sense, and how do you recognize that each is done?
 
-- Welche Werkzeuge (Editor, Laufzeit, Compiler) sind schon installiert, welche fehlen?
-- Soll das Projekt mit Git versioniert werden, und wo liegt das Repository?
-- Wie werden geheime Zugangsdaten vom Quellcode getrennt?
-  - Empfohlenes Vorgehen: Die Werte stehen nur in einer lokalen `.env`-Datei. Diese Datei steht in `.gitignore`, damit Git sie nicht erfasst. Im Repository liegt eine `.env.example` mit leeren Platzhaltern.
-  - Wichtig: `.gitignore` ist selbst öffentlich und versteckt **keine** Werte. Sie schützt nur Dateien, die noch nicht von Git erfasst wurden. Wurde ein Geheimnis bereits committet, bleibt es im Verlauf. Dann muss der Schlüssel sofort erneuert werden.
+### 10. Development environment
 
-### 11. Prototyp
+- Which tools (editor, runtime, compiler) are already installed, and which are missing?
+- Should the project be versioned with Git, and where does the repository live?
+- How are secret credentials kept separate from the source code?
+  - Recommended approach: The values live only in a local `.env` file. That file is listed in `.gitignore` so Git does not track it. The repository contains a `.env.example` with empty placeholders.
+  - Important: `.gitignore` is itself public and does **not** hide any values. It only protects files that Git does not yet track. If a secret was already committed, it stays in the history. In that case the key must be rotated immediately.
 
-- Welcher Arbeitsablauf soll im Prototyp als Erstes funktionieren?
-- Welche Beispieldaten oder vorläufigen Oberflächen dürfen verwendet werden?
-- Was soll der Prototyp beweisen?
+### 11. Prototype
 
-### 12. Schrittweise Entwicklung
+- Which workflow should work first in the prototype?
+- Which sample data or placeholder interfaces may be used?
+- What should the prototype prove?
 
-- Wie sollen Code, Dateinamen und Ordner benannt und strukturiert werden?
-- Wie sollen Eingabefehler und unerwartete Situationen behandelt werden?
-- Wie oft soll committet werden, und wie wird die Aufgabenliste aktuell gehalten?
+### 12. Step-by-step development
 
-### 13. Tests
+- How should code, file names, and folders be named and structured?
+- How should input errors and unexpected situations be handled?
+- How often should you commit, and how is the task list kept up to date?
 
-- Was soll automatisch getestet werden?
-- Welche Fehl-, Leer- und Extremeingaben sollen geprüft werden?
-- Wer probiert die Anwendung aus, und auf welchem sauberen Testsystem werden Installation und Deinstallation getestet?
+### 13. Testing
 
-### 14. Sicherheit und Datenschutz
+- What should be tested automatically?
+- Which invalid, empty, and extreme inputs should be checked?
+- Who tries out the application, and on which clean test system are installation and uninstallation tested?
 
-- Welche Daten werden verarbeitet, warum, und wie können sie gelöscht werden?
-- Welche Rechte (Dateien, Netzwerk, Benutzer) braucht die Anwendung höchstens?
-- Gibt es rechtliche Anforderungen für den konkreten Einsatzfall?
+### 14. Security and privacy
 
-### 15. Dokumentation
+- Which data is processed, why, and how can it be deleted?
+- Which permissions (files, network, users) does the application need at most?
+- Are there legal requirements for the specific use case?
 
-- Welche Anleitungen brauchen Benutzer (Installation, Start, Beispiele, Fehlerlösungen)?
-- Welche Hinweise brauchen Entwickler (Aufbau, Abhängigkeiten, Build, Tests)?
-- Welche Lizenz, Versionsnummer und welches Änderungsprotokoll sollen verwendet werden?
+### 15. Documentation
 
-### 16. Veröffentlichung vorbereiten
+- Which guides do users need (installation, start, examples, troubleshooting)?
+- Which notes do developers need (structure, dependencies, build, tests)?
+- Which license, version number, and changelog should be used?
 
-- Welches Paketformat soll es sein (Installer, portable Version, Container)?
-- Wie wird das Paket vor der Verteilung getestet und auf Manipulation geprüft?
-- Wie sieht der Rückweg zur vorherigen stabilen Version aus?
+### 16. Preparing the release
 
-### 17. Bereitstellung
+- Which package format should it be (installer, portable version, container)?
+- How is the package tested before distribution and checked for tampering?
+- What is the way back to the previous stable version?
 
-- Über welchen vertrauenswürdigen Kanal soll veröffentlicht werden?
-- Sollen zuerst wenige Testbenutzer die Anwendung bekommen?
-- Wie können Benutzer Kontakt aufnehmen, und wo gibt es Prüfsumme und Dokumentation?
+### 17. Deployment
 
-### 18. Betrieb und Wartung
+- Through which trusted channel should it be released?
+- Should a few test users receive the application first?
+- How can users get in touch, and where are the checksum and documentation available?
 
-- Wo werden Fehlermeldungen und Rückmeldungen gesammelt?
-- Wie werden Sicherheitsprobleme und Abhängigkeits-Updates priorisiert?
-- Wie werden Daten gesichert, und wie wird die Wiederherstellung getestet?
+### 18. Operations and maintenance
 
-## Ergebnis: `plan.md`
+- Where are error reports and feedback collected?
+- How are security issues and dependency updates prioritized?
+- How is data backed up, and how is restoring tested?
 
-Lege `plan.md` im Projektordner an. Verwende pro Abschnitt eine Überschrift mit der Nummer und dem Namen oben, darunter die Antworten des Benutzers in kurzen Stichpunkten. Ergänze am Anfang:
+## Result: `plan.md`
 
-- **Zusammenfassung** in zwei bis drei Sätzen.
-- **Annahmen**: alles, was der Assistent vorgeschlagen hat, weil der Benutzer es nicht wusste.
-- **Offene Fragen**: alles, was noch geklärt werden muss.
+Create `plan.md` in the project folder. Use one heading per section with the number and name above, followed by the user's answers as short bullet points. Add at the top:
 
-Füge am Ende eine **Aufgabenliste** mit den Meilensteinen aus Abschnitt 9 als Checkboxen hinzu.
+- **Summary** in two to three sentences.
+- **Assumptions**: everything the assistant suggested because the user did not know.
+- **Open questions**: everything that still needs to be clarified.
 
-## Abschluss-Checkliste
+Add a **task list** at the end with the milestones from section 9 as checkboxes.
 
-- [ ] Problem, Zielgruppe und Nutzen sind klar beschrieben.
-- [ ] Die Muss-Funktionen der ersten Version sind festgelegt.
-- [ ] Plattform, Technik und Datenspeicherung sind entschieden.
-- [ ] Aufgaben, Risiken und Meilensteine sind dokumentiert.
-- [ ] Git und eine sichere Entwicklungsumgebung sind geplant.
-- [ ] Der wichtigste Benutzerablauf ist beschrieben.
-- [ ] Tests, Installation und unterstützte Systeme sind geplant.
-- [ ] Sicherheit, Datenschutz und Lizenzen sind geklärt.
-- [ ] Benutzerhilfe und technische Dokumentation sind geplant.
-- [ ] Veröffentlichung und Wartung sind organisiert.
-- [ ] Der Benutzer hat `plan.md` gelesen und freigegeben.
+## Closing checklist
 
-## Ideen für weitere Trainingsmodule
+- [ ] Problem, target audience, and benefit are clearly described.
+- [ ] The must-have features of the first version are defined.
+- [ ] Platform, technology, and data storage are decided.
+- [ ] Tasks, risks, and milestones are documented.
+- [ ] Git and a safe development environment are planned.
+- [ ] The most important user workflow is described.
+- [ ] Tests, installation, and supported systems are planned.
+- [ ] Security, privacy, and licenses are clarified.
+- [ ] User help and technical documentation are planned.
+- [ ] Release and maintenance are organized.
+- [ ] The user has read and approved `plan.md`.
 
-Die Abschnitte eignen sich als Vorlage für neue Module im Ordner `training/`:
+## Ideas for further training modules
 
-- **Modul „Projektplanung mit KI“**: Ein Projekt mit diesem Interview planen (Abschnitte 1–9).
-- **Modul „Sicher entwickeln“**: Abschnitte 10 und 14 mit Geheimnissen, Abhängigkeiten und Datenschutz vertiefen.
-- **Modul „Testen und Veröffentlichen“**: Abschnitte 13, 16 und 17 mit automatischen Tests und Release-Paketen üben.
-- **Modul „Betrieb und Wartung“**: Abschnitt 18 mit Fehlererfassung, Updates und Datensicherung behandeln.
+These sections work as templates for new modules in the `training/` folder:
 
-## Quellenbasis
+- **Module "Project planning with AI"**: Plan a project with this interview (sections 1–9). Done as [Module 07](training/module-07-project-planning/README.md).
+- **Module "Developing securely"**: Deepen sections 10 and 14 with secrets, dependencies, and privacy.
+- **Module "Testing and releasing"**: Practice sections 13, 16, and 17 with automated tests and release packages.
+- **Module "Operations and maintenance"**: Cover section 18 with error collection, updates, and backups.
 
-Die Reihenfolge orientiert sich am üblichen Software Development Life Cycle mit Planung, Anforderungsanalyse, Entwurf, Entwicklung, Test, Bereitstellung und Wartung [web:1][web:3][web:9]. Sicherheitsanforderungen sollten nicht erst am Ende geprüft, sondern in den gesamten Entwicklungsprozess eingebunden werden [web:2][web:7].
+## Sources
+
+The order follows the usual software development life cycle of planning, requirements analysis, design, development, testing, deployment, and maintenance [web:1][web:3][web:9]. Security requirements should not be checked only at the end but built into the entire development process [web:2][web:7].

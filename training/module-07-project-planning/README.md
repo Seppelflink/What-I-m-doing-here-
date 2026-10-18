@@ -20,6 +20,6 @@ Structure
 - assets/ — sample plan
 
 Interview script
-- The full interview (German) is in the repository root: [steps.md](../../steps.md). It covers all 18 steps. This module uses steps 1–9.
+- The full interview is in the repository root: [steps.md](../../steps.md) (German version: [steps.de.md](../../steps.de.md)). It covers all 18 steps. This module uses steps 1–9.
 
 Estimated duration: 45 minutes (hands-on)
