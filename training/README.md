@@ -17,8 +17,10 @@ Work through the modules in order. Each module includes slides and a hands-on ex
 3. [APIs and tools](module-03-apis-and-tools/) — make a model request, parse a response, and handle errors (45 minutes).
 4. [Responsible AI and safety](module-04-responsible-ai/) — examine risks and practice mitigations (30–45 minutes).
 5. [Build a demo app](module-05-demo-app/) — connect a simple interface to a model and add basic safeguards (60–90 minutes).
+6. [Retrieval-augmented generation](module-06-rag/) — ground answers in trusted documents and cite sources (45–60 minutes).
+7. [Project planning with AI](module-07-project-planning/) — use an AI interviewer to turn an idea into a reviewed `plan.md` (45 minutes).
 
-The complete path takes approximately 3½–4 hours, including exercises. You can also use individual modules as standalone lessons.
+The complete path takes approximately 5–6 hours, including exercises. You can also use individual modules as standalone lessons.
 
 Structure
 - module-template/: Templates and guidance for authors
@@ -28,6 +30,7 @@ Structure
 - module-04-responsible-ai/: Responsible AI & safety (new)
 - module-05-demo-app/: Build and deploy a small demo app (new)
 - module-06-rag/: Retrieval-augmented generation: grounding answers in trusted documents (new)
+- module-07-project-planning/: Project planning with an AI interviewer that produces a plan.md (new)
 
 Goals
 - Provide lightweight, markdown-based modules (slides + exercises)
