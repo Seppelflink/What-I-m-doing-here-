@@ -15,7 +15,7 @@ The goal is to earn money from the existing training course. Modules stay free a
 
 - Which license applies to the premium bundle (the repo is MIT, so the free content is copyable)?
 - Imprint and tax duties for selling in Germany.
-- Which topic should the new premium module cover (ideas: "Developing securely", "Testing and releasing", "Operations and maintenance")?
+- What additional premium-only content should be developed? Module 08, "Developing securely", was added to the public repository as a free module.
 - Price of the bundle.
 
 ## 1. Idea and problem
@@ -33,7 +33,7 @@ The goal is to earn money from the existing training course. Modules stay free a
 
 ## 4. First version (MVP)
 
-- Modules 01–07 as a polished bundle plus one new premium module.
+- Polish modules 01–07; Module 08, "Developing securely", is a new free module. Decide what distinct premium-only content will make the paid bundle valuable.
 - Sold via Gumroad or Ko-fi.
 - Success: 10 sales within 3 months.
 
@@ -99,7 +99,7 @@ The goal is to earn money from the existing training course. Modules stay free a
 
 - [ ] Polish modules 01–07 (run every exercise, fix links and wording)
 - [ ] Decide on the license of the premium bundle and check imprint/tax duties
-- [ ] Choose a topic and write the new premium module
+- [x] Choose a topic and write a new course module: Module 08, "Developing securely" (published free in the public repository)
 - [ ] Recruit 2–3 beta learners and collect feedback
 - [ ] Package the ZIP with a changelog
 - [ ] Create the Gumroad/Ko-fi page and set a price
