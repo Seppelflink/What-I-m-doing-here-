@@ -2,7 +2,7 @@
 
 ## Summary
 
-The goal is to earn money from the existing training course. The planned public modules will be completed before deciding what content, if any, should be premium. The target audience is beginners with no AI knowledge; a later paid bundle may be sold as a ZIP via Gumroad or Ko-fi.
+The goal is to earn money from the existing training course. Public modules 01–10 are now drafted; polish and exercise validation remain before deciding what content, if any, should be premium. The target audience is beginners with no AI knowledge; a later paid bundle may be sold as a ZIP via Gumroad or Ko-fi.
 
 ## Assumptions
 
@@ -15,7 +15,7 @@ The goal is to earn money from the existing training course. The planned public 
 
 - Which license applies to the premium bundle (the repo is MIT, so the free content is copyable)?
 - Imprint and tax duties for selling in Germany.
-- What additional premium-only content, if any, should be developed after the planned public modules are complete? Modules 08 and 09 have been added to the public repository as free modules.
+- What additional premium-only content, if any, should be developed after public modules 01–10 are polished and validated? Modules 08–10 have been added to the public repository as free modules.
 - Price of the bundle.
 
 ## 1. Idea and problem
@@ -97,12 +97,13 @@ The goal is to earn money from the existing training course. The planned public 
 
 ## Task list
 
-- [ ] Complete the planned public course modules (currently through Module 10) and polish modules 01–10 (run every exercise, fix links and wording)
+- [x] Draft all planned public course modules through Module 10
+- [ ] Polish modules 01–10 (run every exercise, fix links and wording)
 - [ ] Decide on the license of the premium bundle and check imprint/tax duties
 - [x] Publish Module 08, "Developing securely", as free public course content
 - [x] Publish Module 09, "Testing and releasing", as free public course content
-- [ ] Write Module 10, "Operations and maintenance", as free public course content
-- [ ] After the planned public modules are complete, decide whether to create a premium bundle and what distinct content it should include
+- [x] Publish Module 10, "Operations and maintenance", as free public course content
+- [ ] After public modules 01–10 are polished and validated, decide whether to create a premium bundle and what distinct content it should include
 - [ ] Recruit 2–3 beta learners and collect feedback
 - [ ] Package the ZIP with a changelog
 - [ ] Create the Gumroad/Ko-fi page and set a price
