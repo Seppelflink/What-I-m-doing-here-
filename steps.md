@@ -159,7 +159,7 @@ These sections work as templates for new modules in the `training/` folder:
 - **Module "Project planning with AI"**: Plan a project with this interview (sections 1–9). Done as [Module 07](training/module-07-project-planning/README.md).
 - **Module "Developing securely"**: Deepen sections 10 and 14 with secrets, dependencies, and privacy. Covered in [Module 08](training/module-08-secure-development/README.md).
 - **Module "Testing and releasing"**: Practice sections 13, 16, and 17 with automated tests and release packages. Covered in [Module 09](training/module-09-testing-releasing/README.md).
-- **Module "Operations and maintenance"**: Cover section 18 with error collection, updates, and backups.
+- **Module "Operations and maintenance"**: Cover section 18 with error collection, updates, and backups. Covered in [Module 10](training/module-10-operations-maintenance/README.md).
 
 ## Sources
 
