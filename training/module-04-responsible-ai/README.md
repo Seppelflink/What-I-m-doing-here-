@@ -14,4 +14,4 @@ Structure
 - exercise.md — hands-on bias-detection, evaluation checklist, and mitigation steps
 - assets/ — (optional) example prompts, datasets, or test cases
 
-Estimated duration: 45 minutes (lecture + hands-on)
+Estimated duration: 30–45 minutes (lecture + hands-on)

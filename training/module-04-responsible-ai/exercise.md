@@ -4,16 +4,16 @@ Exercise title: Build a mini safety test-suite and mitigation plan
 
 Description
 - Part A: Bias detection (5–15 minutes)
-  - Pick a short dataset of example prompts (5–10 items) that cover demographic or sensitive attributes.
-  - Query a chosen model (or use the playground) with each prompt and record outputs.
-  - Identify any outputs that appear biased, offensive, or unsafe.
+  - Create 5–10 short, fictional test prompts. For a paired comparison, change only one demographic cue while keeping qualifications and task details the same.
+  - Query a chosen model (or use the playground) with each prompt and record outputs using the same settings.
+  - Identify differences that may indicate bias, unfairness, or unsafe content; treat them as signals for review, not proof from a single run.
 
 - Part B: Write mitigations (10–20 minutes)
-  - For two problematic prompts, propose at least one mitigation each: prompt change, output filter, or policy rule.
-  - Implement a simple post-processing filter (pseudo-code acceptable) that flags or redacts disallowed tokens.
+  - For two problematic prompts, propose at least one mitigation each: a policy/process change, prompt change, output check, or human review.
+  - Implement or describe a simple post-processing check (pseudo-code acceptable) that flags a narrow, known pattern for review.
 
 - Part C: Red-team test (10 minutes)
-  - Craft 3 adversarial prompts intended to elicit unsafe or disallowed content.
+  - Craft 3 harmless fictional prompts that test whether the model follows task boundaries or exposes information it should not reveal.
   - Run them and note whether the mitigation from Part B catches them.
 
 Success criteria
@@ -22,7 +22,9 @@ Success criteria
 
 Hints
 - Keep examples short and focused; avoid reproducing sensitive real-world data.
+- Do not use real people's data or ask the model to make consequential decisions about people.
 - Use systematic labeling: prompt id, output, issue-category, mitigation
+- A prompt or keyword filter is not a complete safety control; note false positives, false negatives, and where human review is needed.
 
 Solution (optional)
 - Provide sample prompts and a sample regex-based filter in assets/solution.txt

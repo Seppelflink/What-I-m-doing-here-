@@ -6,8 +6,13 @@ Overview
 Learning objectives
 - Understand what generative AI is and common applications
 - Recognize safety and ethical considerations
-- Try a small hands-on exercise to generate simple prompts
+- Write and refine a prompt for a simple task
 
-Contents
-- slides.md — core slides
-- exercise.md — hands-on exercise
+Prerequisites
+- None
+
+Structure
+- slides.md — core concepts, common uses, and limitations
+- exercise.md — hands-on prompt design and reflection
+
+Estimated duration: 30 minutes

@@ -9,6 +9,10 @@ Learning objectives
 - Parse model responses and handle errors and retries
 - Use tooling: playgrounds, SDKs, and simple CLI clients
 
+Prerequisites
+- Modules 01–02 recommended
+- A provider API key is optional; a configured local CLI or mock can be used instead
+
 Structure
 - slides.md — concepts, examples, and best practices
 - exercise.md — hands-on API tasks

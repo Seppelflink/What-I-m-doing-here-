@@ -23,4 +23,4 @@ Estimated duration: 45–60 minutes (hands-on)
 Quick run (Node 18+, no dependencies)
 - From the repository root: `node training/module-06-rag/assets/rag.mjs` (runs 4 sample questions)
 - Ask your own: `node training/module-06-rag/assets/rag.mjs "How long is the warranty?"`
-- Sample documents live in assets/docs/; edit them to experiment. with no API key. Learners without API access use a simple mock "model" step (described in the exercise), so no cloud account or paid service is required; learners with API access can swap in a real model call.
+- Sample documents live in `assets/docs/`; edit them to experiment. No API key is needed: the demo uses a mock "model" step described in the exercise, so no cloud account or paid service is required. Learners with API access can optionally replace it with a real model call.
