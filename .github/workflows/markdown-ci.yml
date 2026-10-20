@@ -8,6 +8,9 @@ on:
     paths:
       - '**/*.md'
 
+permissions:
+  contents: read
+
 jobs:
   lint-and-links:
     runs-on: ubuntu-latest
