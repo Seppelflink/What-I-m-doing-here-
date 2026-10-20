@@ -7,6 +7,7 @@ Learning objectives
 - Understand prompt specificity, context, and constraints
 - Use examples and few-shot prompting effectively
 - Iterate and evaluate prompts to improve quality
+- Assess outputs for accuracy, relevance, and safety
 
 Structure
 - slides.md — core concepts and examples

@@ -27,6 +27,7 @@ Reflection questions
 - Were there any surprising outputs or safety concerns?
 
 Optional: share one prompt and its output in the project issues or PR for feedback.
+Before sharing, remove private information, credentials, and any content you do not have permission to disclose.
 
 Solution (example outputs)
 - Example initial output and refined output can be added by instructors as a reference in a separate file (solution.md) or below a collapsible section.

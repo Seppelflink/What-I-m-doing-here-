@@ -30,7 +30,8 @@ Learning objectives:
 
 # Slide 5 — Output filtering & human checks
 - Keyword/regex filters for disallowed content
-- Confidence thresholds and fallback responses
+- A model's self-reported confidence is not proof that an answer is correct
+- Fallback responses and human review for high-risk outputs
 - Human-in-the-loop review for high-risk outputs
 
 # Slide 6 — Evaluation strategies

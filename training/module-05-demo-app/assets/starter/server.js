@@ -1,53 +1,65 @@
-// Minimal Express server for demo app starter
-// Usage:
-// 1. npm init -y
-// 2. npm install express
-// 3. Set env: MODEL_API_URL (optional) and MODEL_API_KEY (optional)
-// 4. node server.js
+// Requires Node.js 18+, Express, and dotenv. See the module README for setup.
 
 const express = require('express');
-const fetch = global.fetch || require('node-fetch'); // node >=18 has fetch
+require('dotenv').config();
 const app = express();
-app.use(express.json());
+app.use(express.json({ limit: '8kb' }));
 
-// Simple POST /api/generate -> forwards to model API or returns a mocked response if API key is not set
+// POST /api/generate forwards to a configured model API or returns a local mock.
 app.post('/api/generate', async (req, res) => {
   const { prompt } = req.body || {};
-  if (!prompt || typeof prompt !== 'string') return res.status(400).json({ error: 'Missing prompt' });
+  if (typeof prompt !== 'string' || !prompt.trim()) return res.status(400).json({ error: 'Missing prompt' });
 
-  // Basic input validation / safety example
   if (prompt.length > 2000) return res.status(400).json({ error: 'Prompt too long' });
 
-  const apiUrl = process.env.MODEL_API_URL; // e.g. https://api.example.com/v1/generate
+  const apiUrl = process.env.MODEL_API_URL;
   const apiKey = process.env.MODEL_API_KEY;
+  const authHeader = process.env.MODEL_API_AUTH_HEADER || 'Authorization';
+  const authPrefix = process.env.MODEL_API_AUTH_PREFIX || '';
 
-  if (!apiUrl || !apiKey) {
-    // Mocked response for offline/demo use
+  if (!apiUrl && !apiKey) {
     return res.json({ text: `MOCKED RESPONSE: Received prompt (${prompt.length} chars).` });
   }
 
+  if (!apiUrl || !apiKey) {
+    return res.status(500).json({ error: 'Configure both model settings or clear both to use mock mode' });
+  }
+
   try {
+    const authValue = authPrefix ? [authPrefix, apiKey].join(' ') : apiKey;
     const response = await fetch(apiUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
+        // Configure the header name and optional prefix to match your provider.
+        [authHeader]: authValue
       },
-      body: JSON.stringify({ prompt, max_tokens: 150 })
+      body: JSON.stringify({ prompt, max_tokens: 150 }),
+      signal: AbortSignal.timeout(30_000)
     });
 
-    const body = await response.json();
-    if (!response.ok) return res.status(502).json({ error: body.error || 'Upstream error' });
+    const body = await response.json().catch(() => null);
+    if (!response.ok) {
+      console.error('Model API returned HTTP status', response.status);
+      return res.status(502).json({ error: 'Model API request failed' });
+    }
+    if (!body || typeof body !== 'object') {
+      return res.status(502).json({ error: 'Model API returned an invalid response' });
+    }
 
-    // Adapt to the provider's response shape; here assume body.text contains the output
-    return res.json({ text: body.text || body.output || JSON.stringify(body) });
-  } catch (err) {
-    console.error('Model API error', err);
-    return res.status(500).json({ error: 'Model API request failed' });
+    // Adapt the response fields to the provider's documented response shape.
+    const text = body.text || body.output;
+    if (typeof text !== 'string') {
+      return res.status(502).json({ error: 'Model API response did not contain text' });
+    }
+    return res.json({ text });
+  } catch {
+    console.error('Model API request failed');
+    return res.status(502).json({ error: 'Model API request failed' });
   }
 });
 
 app.use(express.static('assets/starter'));
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Demo server listening on http://localhost:${port}`));
+app.listen(port, '127.0.0.1', () => console.log(`Demo server listening on http://127.0.0.1:${port}`));

@@ -6,7 +6,7 @@ This folder contains course materials for the "Generative AI for Beginners" trai
 
 This course is for learners who are new to generative AI. No machine-learning experience is needed. Modules 01–02 can be completed with any chat-based AI tool; modules 03 and 05 can be followed with a local or mocked model if you do not have API access.
 
-By the end of the course, learners should be able to explain what generative AI can and cannot do, write and evaluate prompts, make a basic model request, identify responsible-use risks, and build a small demo that handles input and output safely.
+By the end of the course, learners should be able to explain what generative AI can and cannot do, write and evaluate prompts, make a basic model request, identify responsible-use risks, build a small demo, ground answers in documents, plan a project, and practice testing, secure development, release, and maintenance.
 
 ## Suggested learning path
 

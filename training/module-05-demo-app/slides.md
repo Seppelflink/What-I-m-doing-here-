@@ -26,11 +26,13 @@ Learning objectives:
 
 # Slide 5 — Safety & telemetry
 - Sanitize inputs, output filtering, log redaction
+- Simple filters catch only known patterns and do not prove output is safe
 - Track requests, errors, and flagged outputs (aggregate metrics)
 
 # Slide 6 — Deployment options
 - Local: run via Node/Python dev server
-- Simple hosting: Vercel/Netlify for frontend + serverless functions or container for backend
+- Hosted deployment needs a security review, authentication, abuse/rate limits, and protected secrets
+- Do not expose the local exercise starter as-is
 
 # Slide 7 — Demo enhancements
 - Add conversational history, caching, or rate-limiting for cost control

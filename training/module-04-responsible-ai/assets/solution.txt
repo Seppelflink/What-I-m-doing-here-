@@ -1,5 +1,7 @@
 Sample solution hints
 
+These snippets are teaching examples only. A keyword or regex check catches only patterns it knows; it cannot establish that an output is safe or fair. Use it as one signal alongside policy, testing, and human review where appropriate.
+
 - Example filter (regex pseudo-code):
   if (output.matches(/\b(violent|hate|slur)\b/i)) {
     flagForReview(output)

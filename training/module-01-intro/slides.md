@@ -19,7 +19,7 @@ Generative AI refers to models that can create text, images, code, or other medi
 # Slide 4 — How it works (brief)
 - Models are trained on large datasets to predict tokens
 - They generalize patterns and can generate novel outputs
-- Not deterministic; outputs may vary per run
+- Outputs can vary between runs, and fluent text can still be inaccurate
 
 # Slide 5 — Common use cases
 - Content generation (articles, summaries)
@@ -51,8 +51,8 @@ Generative AI refers to models that can create text, images, code, or other medi
 Move to the hands-on exercise: practice writing and refining prompts.
 
 # Slide 11 — Resources
-- Responsible AI guide: (link)
-- Prompt engineering notes: (link)
+- [Responsible AI and safety](../module-04-responsible-ai/README.md)
+- [Prompt engineering](../module-02-prompt-engineering/README.md)
 
 # Slide 12 — Key takeaways
 - Generative AI is powerful but requires careful prompting and review
