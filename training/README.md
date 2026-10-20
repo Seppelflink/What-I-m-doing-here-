@@ -20,8 +20,9 @@ Work through the modules in order. Each module includes slides and a hands-on ex
 6. [Retrieval-augmented generation](module-06-rag/) — ground answers in trusted documents and cite sources (45–60 minutes).
 7. [Project planning with AI](module-07-project-planning/) — use an AI interviewer to turn an idea into a reviewed `plan.md` (45 minutes).
 8. [Developing securely](module-08-secure-development/) — threat-model an AI feature and choose layered safeguards (45 minutes).
+9. [Testing and releasing](module-09-testing-releasing/) — build a regression test set and a verifiable release checklist (45–60 minutes).
 
-The complete path takes approximately 6–7 hours, including exercises. You can also use individual modules as standalone lessons.
+The complete path takes approximately 7–8 hours, including exercises. You can also use individual modules as standalone lessons.
 
 Structure
 - module-template/: Templates and guidance for authors
@@ -33,6 +34,7 @@ Structure
 - module-06-rag/: Retrieval-augmented generation: grounding answers in trusted documents (new)
 - module-07-project-planning/: Project planning with an AI interviewer that produces a plan.md (new)
 - module-08-secure-development/: Threat-model an AI feature and practice security and privacy safeguards (new)
+- module-09-testing-releasing/: Test AI behavior and prepare a controlled, reversible release (new)
 
 Goals
 - Provide lightweight, markdown-based modules (slides + exercises)
