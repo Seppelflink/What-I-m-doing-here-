@@ -2,20 +2,20 @@
 
 ## Summary
 
-The goal is to earn money from the existing training course. Public modules 01–10 are now drafted; polish and exercise validation remain before deciding what content, if any, should be premium. The target audience is beginners with no AI knowledge; a later paid bundle may be sold as a ZIP via Gumroad or Ko-fi.
+The goal is to earn money from the existing training course. Public modules 01–10 are drafted, and a first polish pass has been merged; remaining polish and exercise validation come before premium development. The proposed premium topic is **The AI Application Development Lifecycle**, a guided capstone on building AI-powered software from idea through operations.
 
 ## Assumptions
 
 - The user did not know what to build; the paid course idea was suggested and accepted.
 - Gumroad/Ko-fi is used (no own shop).
-- Free modules stay public under MIT. Premium content and its value proposition will be decided only after the planned public modules are complete.
+- Free modules stay public under MIT. The agreed premium topic is The AI Application Development Lifecycle; its detailed scope and distinct value proposition will be finalized after the planned public modules are polished and validated.
 - Premium bundle license is not decided yet.
 
 ## Open questions
 
 - Which license applies to the premium bundle (the repo is MIT, so the free content is copyable)?
 - Imprint and tax duties for selling in Germany.
-- What additional premium-only content, if any, should be developed after public modules 01–10 are polished and validated? Modules 08–10 have been added to the public repository as free modules.
+- What exact capstone project, templates, worked example, and original materials should the premium lifecycle guide include?
 - Price of the bundle.
 
 ## 1. Idea and problem
@@ -33,7 +33,7 @@ The goal is to earn money from the existing training course. Public modules 01�
 
 ## 4. First version (MVP)
 
-- Complete the planned public course modules first; then decide whether and what to offer as premium content.
+- After public modules 01–10 are polished and validated, develop a distinct, guided capstone titled **The AI Application Development Lifecycle**. It should connect the lifecycle end to end without merely repackaging the public modules.
 - Sold via Gumroad or Ko-fi.
 - Success: 10 sales within 3 months.
 
@@ -56,7 +56,7 @@ The goal is to earn money from the existing training course. Public modules 01�
 
 ## 9. Project planning
 
-- Order: polish modules → premium module → package ZIP → Gumroad page → announce.
+- Order: finish public-module polish and exercise validation → develop the lifecycle capstone → package ZIP → Gumroad page → announce.
 
 ## 10. Development environment
 
@@ -103,7 +103,8 @@ The goal is to earn money from the existing training course. Public modules 01�
 - [x] Publish Module 08, "Developing securely", as free public course content
 - [x] Publish Module 09, "Testing and releasing", as free public course content
 - [x] Publish Module 10, "Operations and maintenance", as free public course content
-- [ ] After public modules 01–10 are polished and validated, decide whether to create a premium bundle and what distinct content it should include
+- [x] Choose the proposed premium topic: **The AI Application Development Lifecycle**
+- [ ] After public modules 01–10 are polished and validated, define and develop the distinct lifecycle capstone (project, templates, worked example, and original materials)
 - [ ] Recruit 2–3 beta learners and collect feedback
 - [ ] Package the ZIP with a changelog
 - [ ] Create the Gumroad/Ko-fi page and set a price
