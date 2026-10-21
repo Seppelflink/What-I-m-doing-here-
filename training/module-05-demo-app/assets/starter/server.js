@@ -59,7 +59,7 @@ app.post('/api/generate', async (req, res) => {
   }
 });
 
-app.use(express.static('assets/starter'));
+app.use(express.static(__dirname));
 
 const port = process.env.PORT || 3000;
 app.listen(port, '127.0.0.1', () => console.log(`Demo server listening on http://127.0.0.1:${port}`));

@@ -20,6 +20,10 @@ The first four cases match the built-in Module 06 demo. The last two extend the 
 - Exact answer text is reasonable for the deterministic mock. For a real model, use a rubric for factual support, refusal quality, citations, privacy, and safety instead of exact-string matching alone.
 - Keep prompts and documents fictional; avoid personal or confidential data in fixtures.
 
+## Local conflict-case result — 2026-10-20
+
+In an isolated copy of the demo, a synthetic July update said that water damage was covered while the original policy said it was not. The retriever returned both `policy#1` and `update#1`, but the deterministic mock answered from `policy#1` without flagging the conflict. This case failed its expected behavior: retrieval found the conflicting evidence, but ranking and answer selection silently preferred the older statement. A release gate should require conflict detection or human review; this demo does not implement that safeguard.
+
 ## Example release checklist
 
 - [ ] Regression tests pass, and manual-review results are recorded.

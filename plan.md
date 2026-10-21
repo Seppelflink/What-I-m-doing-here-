@@ -74,6 +74,17 @@ The goal is to earn money from the existing training course. Public modules 01�
 
 - Test each exercise personally plus 2–3 beta learners; markdown CI and link checks.
 
+### Public-module validation status — 2026-10-20
+
+- The exercise instructions for Modules 01–10 have been reviewed; this is not a claim that every exercise has been fully completed.
+- The Module 07 planning interview was previously run in chat and produced this `plan.md`; the exercise's independent partner review has not been recorded.
+- Module 06/09 deterministic RAG baseline: all four built-in questions ran, including the explicit refusal for the out-of-scope question and source citations for answerable questions.
+- Module 09 conflicting-document edge case: in an isolated copy, both the original policy and a synthetic July update were retrieved, but the mock answered from the older policy without flagging the conflict. This case failed; the demo needs conflict detection or human review before such a release decision.
+- Module 05 starter: the README startup flow was smoke-tested locally in mock mode. The static page, successful mock response, empty-prompt rejection, and 2,001-character prompt rejection passed.
+- Module 05 smoke testing found and fixed a static-file path bug: the app UI returned 404 when started from the documented starter directory. Static assets now resolve relative to `server.js`.
+- Module 05 and Module 06 JavaScript syntax checks and `git diff --check` passed.
+- Still outstanding: full learner completion/review of every exercise, provider-specific checks for Modules 03/05 (no live credentials used), and feedback from 2–3 beta learners.
+
 ## 14. Security and privacy
 
 - No personal data stored; sales data stays with Gumroad.
@@ -98,6 +109,7 @@ The goal is to earn money from the existing training course. Public modules 01�
 ## Task list
 
 - [x] Draft all planned public course modules through Module 10
+- [x] Fix the Module 05 static asset path found during the documented startup smoke test
 - [ ] Polish modules 01–10 (run every exercise, fix links and wording)
 - [ ] Decide on the license of the premium bundle and check imprint/tax duties
 - [x] Publish Module 08, "Developing securely", as free public course content
