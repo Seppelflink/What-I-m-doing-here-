@@ -4,9 +4,9 @@ A small repository for training materials and experiments.
 This worktree contains a lightweight "Generative AI for Beginners" training scaffold with markdown-based modules and exercises.
 
 Training overview
-- Location: training/
-- Start with: training/module-01-intro/
-- Module template: training/module-template/
+- This beginner-friendly Generative AI course has 10 modules, with hands-on exercises and an estimated total time of 7–10 hours.
+- Start with the [course guide](training/README.md) for the suggested learning path and module details.
+- Begin at [Module 01: Introduction](training/module-01-intro/); copy the [module template](training/module-template/) when authoring a new module.
 
 Contributing
 - To add a module, copy training/module-template/ into training/module-XX-your-topic/ and update slides.md and exercise.md.
@@ -14,11 +14,12 @@ Contributing
 - Prefer short, hands-on exercises and include learning objectives in each module's README.md.
 
 Usage
-- Read training/module-01-intro/README.md to preview the sample module.
-- To preview slides locally, open the slides.md in any markdown viewer or use an editor with slide preview support.
+- Work through the modules in order; each module includes a README, slides, and a hands-on exercise.
+- Modules 01–02 can be completed with any chat-based AI tool. Modules 03 and 05 can use a local or mocked model if you do not have API access.
+- To preview slides locally, open a module's slides.md in any Markdown viewer or use an editor with slide preview support.
 
 CI
-- A lightweight Markdown CI workflow (Super-Linter + lychee) is included at .github/workflows/markdown-ci.yml to lint markdown and check links on PRs.
+- The [Markdown CI workflow](.github/workflows/markdown-ci.yml) runs on pushes and pull requests that change Markdown files. It runs Super-Linter and checks links with lychee; link-check failures are non-blocking.
 
 Contact & feedback
 - Open an issue or PR in this repository for improvements, suggestions, or to add modules.
