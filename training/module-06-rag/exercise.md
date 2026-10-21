@@ -8,7 +8,7 @@ Setup
 
 Description
 - Part A: Chunk (10–15 minutes)
-  - Load every file and split it into chunks of roughly 100–150 words.
+  - Load every file and split it into 40-word chunks, matching the reference implementation.
   - Store each chunk with an ID such as `faq#2` (file name + chunk number).
 
 - Part B: Retrieve (15 minutes)

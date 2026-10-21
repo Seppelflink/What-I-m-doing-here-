@@ -30,7 +30,9 @@ curl -sS -X POST "$MODEL_API_URL" \
 - Implement a small script (Python/Node) that:
   - Sends the request
   - Parses and validates JSON
-  - Retries only a limited number of times on retryable failures such as 429 or transient 5xx responses; avoid logging credentials or full prompts
+  - Retries at most twice after the initial attempt, and only for retryable failures such as 429 or transient 5xx responses; use capped exponential backoff. Simulate failures locally rather than deliberately triggering provider limits or charges.
+  - If you do not have API access, return a fixed mock response such as `{"summary":"The garden opens on Saturdays.","keywords":["garden","Saturday"]}` and run it through the same parsing and validation code.
+  - Avoid logging credentials or full prompts.
 
 Success criteria
 - Script or local mock returns and validates structured output for at least one prompt
