@@ -5,7 +5,7 @@ Exercise title: Produce a reviewed `plan.md` for a small project idea
 Setup
 - Pick a small project idea you would genuinely like to build (for example a to-do list, a recipe organizer, or a study timer).
 - Open any chat-based AI assistant. No API key or coding is required.
-- Open [steps.md](../../steps.md) and copy steps 1–9 together with the "Rules for the assistant" section into the chat, or paste this instruction: "Interview me one question at a time to plan my project. Offer suggested answers, record guesses as assumptions, and never ask for or write secrets. At the end, write a plan.md."
+- Open [steps.md](../../steps.md) (English; [German version](../../steps.de.md)) and copy steps 1–9 together with the "Rules for the assistant" section into the chat, or paste this instruction: "Interview me one question at a time to plan my project. Offer suggested answers, record guesses as assumptions, and never ask for or write secrets. At the end, write a plan.md."
 
 Description
 - Part A: Idea and audience (10 minutes)
