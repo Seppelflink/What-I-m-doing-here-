@@ -23,7 +23,7 @@ Work through the modules in order. Each module includes slides and a hands-on ex
 9. [Testing and releasing](module-09-testing-releasing/) — build a regression test set and a verifiable release checklist (45–60 minutes).
 10. [Operations and maintenance](module-10-operations-maintenance/) — monitor, respond to incidents, and practice recovery for an AI feature (45–60 minutes).
 
-The complete path takes approximately 7–10 hours, including exercises. You can also use individual modules as standalone lessons.
+The complete path takes approximately 5–6 hours, including exercises. You can also use individual modules as standalone lessons.
 
 Structure
 - module-template/: Templates and guidance for authors
