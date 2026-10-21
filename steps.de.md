@@ -1,6 +1,6 @@
 # Interview: Von der Idee zum Projektplan (`plan.md`)
 
-Englische Version: [steps.md](steps.md)
+Englische Kopie: [steps.md](<skills/step-by-step-coding for ai/steps.md>)
 
 Dieses Dokument ist eine Interview-Anleitung. Ein KI-Assistent führt damit ein Gespräch mit dem Benutzer und schreibt die Antworten am Ende in die Datei `plan.md`.
 
