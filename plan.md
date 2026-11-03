@@ -117,7 +117,7 @@ The goal is to earn money from the existing training course. Public modules 01�
 - [x] Publish Module 10, "Operations and maintenance", as free public course content
 - [ ] Decide whether to offer premium-only content and, if so, define its distinct value and scope
 - [ ] After public modules 01–10 are polished and validated, develop any agreed premium-only content
-- [ ] Recruit 2–3 beta learners and collect feedback
+- [ ] Recruit 2–3 beta learners and collect feedback (kit ready in `training/beta-testing/`)
 - [ ] Package the ZIP with a changelog
 - [ ] Create the Gumroad/Ko-fi page and set a price
 - [ ] Announce and track toward 10 sales in 3 months
