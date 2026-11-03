@@ -31,14 +31,37 @@ function retrieve(question, chunks) {
     .slice(0, TOP_K);
 }
 
-// Mock "model": quotes the best-matching sentence of the top chunk, or declines when evidence is weak.
+const NEGATION = /\b(not|no|never|cannot|without)\b|n't\b/i;
+const sourceOf = (id) => id.split("#")[0];
+
+function bestSentence(question, chunk) {
+  const q = new Set(tokenize(question));
+  const overlap = (s) => tokenize(s).filter((w) => q.has(w)).length;
+  return chunk.text.split(/(?<=\.)\s/).sort((a, b) => overlap(b) - overlap(a))[0];
+}
+
+// Heuristic only: two relevant chunks from different documents whose best sentences differ in negation
+// ("covers" vs. "does not cover") are flagged. It misses conflicts such as "one year" vs. "two years".
+function findConflict(question, hits) {
+  const relevant = hits.filter((h) => h.score >= MIN_SCORE);
+  const first = relevant[0];
+  if (!first) return null;
+  const firstNegated = NEGATION.test(bestSentence(question, first));
+  return relevant.slice(1).find(
+    (h) => sourceOf(h.id) !== sourceOf(first.id) && NEGATION.test(bestSentence(question, h)) !== firstNegated
+  ) ?? null;
+}
+
+// Mock "model": quotes the best-matching sentence of the top chunk, declines when evidence is weak,
+// and asks for human review when relevant sources appear to contradict each other.
 function mockAnswer(question, hits) {
   const best = hits[0];
   if (!best || best.score < MIN_SCORE) return "I don't know based on the provided documents.";
-  const q = new Set(tokenize(question));
-  const overlap = (s) => tokenize(s).filter((w) => q.has(w)).length;
-  const sentence = best.text.split(/(?<=\.)\s/).sort((a, b) => overlap(b) - overlap(a))[0];
-  return `${sentence} [${best.id}]`;
+  const conflict = findConflict(question, hits);
+  if (conflict) {
+    return `Possible conflict between [${best.id}] and [${conflict.id}]. Needs human review before answering.`;
+  }
+  return `${bestSentence(question, best)} [${best.id}]`;
 }
 
 function ask(question, chunks) {

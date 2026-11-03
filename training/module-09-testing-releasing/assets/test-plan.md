@@ -22,7 +22,9 @@ The first four cases match the built-in Module 06 demo. The last two extend the 
 
 ## Local conflict-case result — 2026-10-20
 
-In an isolated copy of the demo, a synthetic July update said that water damage was covered while the original policy said it was not. The retriever returned both `policy#1` and `update#1`, but the deterministic mock answered from `policy#1` without flagging the conflict. This case failed its expected behavior: retrieval found the conflicting evidence, but ranking and answer selection silently preferred the older statement. A release gate should require conflict detection or human review; this demo does not implement that safeguard.
+In an isolated copy of the demo, a synthetic July update said that water damage was covered while the original policy said it was not. The retriever returned both `policy#1` and `update#1`, but the deterministic mock answered from `policy#1` without flagging the conflict. That first run failed its expected behavior: retrieval found the conflicting evidence, but answer selection silently preferred the older statement.
+
+Follow-up: the demo now flags relevant chunks from different documents whose best sentences differ in negation, and answers "Possible conflict ... Needs human review" instead. Re-running the same case passed, and the four built-in cases are unchanged. This is a narrow heuristic: it would miss a conflict such as "one year" versus "two years", so keep human review in the release gate and add your own conflict cases.
 
 ## Example release checklist
 
