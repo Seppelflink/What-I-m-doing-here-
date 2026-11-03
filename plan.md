@@ -79,7 +79,7 @@ The goal is to earn money from the existing training course. Public modules 01â€
 - The exercise instructions for Modules 01â€“10 have been reviewed; this is not a claim that every exercise has been fully completed.
 - The Module 07 planning interview was previously run in chat and produced this `plan.md`; the exercise's independent partner review has not been recorded.
 - Module 06/09 deterministic RAG baseline: all four built-in questions ran, including the explicit refusal for the out-of-scope question and source citations for answerable questions.
-- Module 09 conflicting-document edge case: in an isolated copy, both the original policy and a synthetic July update were retrieved, but the mock answered from the older policy without flagging the conflict. This case failed; the demo needs conflict detection or human review before such a release decision.
+- Module 09 conflicting-document edge case: in an isolated copy, both the original policy and a synthetic July update were retrieved, but the mock answered from the older policy without flagging the conflict. This failed; the demo now flags negation-based conflicts for human review (a narrow heuristic that still misses, e.g., differing numbers), and the case passes.
 - Module 05 starter: the README startup flow was smoke-tested locally in mock mode. The static page, successful mock response, empty-prompt rejection, and 2,001-character prompt rejection passed.
 - Module 05 smoke testing found and fixed a static-file path bug: the app UI returned 404 when started from the documented starter directory. Static assets now resolve relative to `server.js`.
 - Module 05 and Module 06 JavaScript syntax checks and `git diff --check` passed.
