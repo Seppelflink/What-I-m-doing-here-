@@ -25,6 +25,8 @@ Work through the modules in order. Each module includes slides and a hands-on ex
 
 The complete path takes approximately 5–6 hours, including exercises. You can also use individual modules as standalone lessons.
 
+Want to help improve the course? See the [beta testing guide](beta-testing/).
+
 Structure
 - module-template/: Templates and guidance for authors
 - module-01-intro/: Sample first module (intro)
